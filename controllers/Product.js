@@ -1,7 +1,7 @@
 // Import Product Model
 const Product = require("../models/Product.js");
  
-async function getProducts (req, res) {
+async function getProduct (_, res) {
     try {
         const product = await Product.findAll();
         res.send(product);
@@ -25,7 +25,7 @@ async function getProductId (req, res) {
 }
  
 // Create a new product
-async function createProducts (req, res)  {
+async function createProduct (req, res)  {
     try {
         await Product.create(req.body);
         res.json({
@@ -36,8 +36,8 @@ async function createProducts (req, res)  {
     }
 }
  
-// Update product by id
-async function updateProducts (req, res) {
+// Update product 
+async function updateProduct (req, res) {
     try {
         await Product.update(req.body);
         res.json({
@@ -48,8 +48,8 @@ async function updateProducts (req, res) {
     }
 }
  
-// Delete product by id
-async function deleteProducts (req, res) {
+// Delete product 
+async function deleteProduct (req, res) {
     try {
         await Product.destroy(req.body);
         res.json({
@@ -61,9 +61,9 @@ async function deleteProducts (req, res) {
 }
 
 module.exports = {
-    getProducts,
+    getProduct,
     getProductId,
-    createProducts,
-    updateProducts,
-    deleteProducts,
+    createProduct,
+    updateProduct,
+    deleteProduct,
 };
