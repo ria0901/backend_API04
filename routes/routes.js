@@ -16,7 +16,7 @@ const router = express.Router();
 // Route get all products
 router.get('/product', getProduct);
 // Route get product by id
-router.get('/product/:id', getProductId);
+router.get('/product/:product_id', getProductId);
 // Route create a new product
 router.post('/product', createProduct);
 // Route update product by id

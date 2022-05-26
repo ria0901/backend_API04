@@ -15,7 +15,7 @@ async function getProductId (req, res) {
     try {
         const product = await Product.findAll({
             where: {
-                id: req.params.id
+                product_id: req.params.product_id
             }
         });
         res.send(product[0]);
