@@ -20,9 +20,9 @@ router.get('/product/:product_id', getProductId);
 // Route create a new product
 router.post('/product', createProduct);
 // Route update product by id
-router.put('/product', updateProduct);
+router.put('/product/:product_id', updateProduct);
 // Route delete product by id
-router.delete('/product', deleteProduct);
+router.delete('/product/:product_id', deleteProduct);
  
 // export router
 module.exports = router;

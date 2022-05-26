@@ -39,7 +39,11 @@ async function createProduct (req, res)  {
 // Update product 
 async function updateProduct (req, res) {
     try {
-        await Product.update(req.body);
+        await Product.update(req.body, {
+            where: {
+                product_id: req.params.product_id
+            }
+        });
         res.json({
             "message": "Product Updated"
         });
@@ -51,7 +55,11 @@ async function updateProduct (req, res) {
 // Delete product 
 async function deleteProduct (req, res) {
     try {
-        await Product.destroy(req.body);
+        await Product.destroy({
+            where: {
+                product_id: req.params.product_id
+            }
+        });
         res.json({
             "message": "Product Deleted"
         });
