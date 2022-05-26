@@ -36,7 +36,7 @@ async function createProducts (req, res)  {
     }
 }
  
-// Update product by id
+// Update product id
 async function updateProducts (req, res) {
     try {
         await Product.update(req.body);
@@ -48,7 +48,7 @@ async function updateProducts (req, res) {
     }
 }
  
-// Delete product by id
+// Delete product id
 async function deleteProducts (req, res) {
     try {
         await Product.destroy(req.body);
