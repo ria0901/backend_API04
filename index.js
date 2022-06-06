@@ -5,7 +5,8 @@ const cors = require ("cors");
 // Import connection
 const db = require ("./config/database.js");
 // Import router
-const Router = require ("./routes/routes.js");
+const Router = require("./routes/routes.js");
+const port = process.env.PORT || 5000;
  
 // Init express
 const app = express();
@@ -26,4 +27,4 @@ try {
 app.use(Router);
  
 // listen on port
-app.listen(5000, () => console.log('Server running at http://localhost:5000'));
+app.listen(port, () => console.log('Server running at http://localhost:5000'));
